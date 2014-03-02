@@ -2,7 +2,7 @@
 
 angular.module('tempistApp')
   .controller('DentistProfileCtrl', function ($scope) {
-    $scope.awesomeThings = [
+    $scope.temp = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'

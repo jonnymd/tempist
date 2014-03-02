@@ -30,6 +30,7 @@
           <a href="#/temp">Temp Profile</a><br>
           <a href="#/dentist">Dentist Profile</a><br>
           <a href="#/search">Search</a>
+          {{people}}
         </div>
       </div>
     </div>
@@ -50,7 +51,11 @@
           <h4>Detail</h4>
         </div>
         <div class="panel-body">
-          Selected Result
+          <ul ng-repeat="person in people">
+            <li></li>
+          </ul>
+          <input type="text" ng-model="newPerson"/>
+          <button type="submit" ng-click="addPerson()">Add New Person</button>
         </div>
       </div>
     </div>

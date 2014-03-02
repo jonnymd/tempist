@@ -4,7 +4,8 @@ angular.module('tempistApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'firebase'
 ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -18,11 +19,11 @@ angular.module('tempistApp', [
       })
       .when('/temp', {
         templateUrl: 'views/tempprofile.html',
-        controller: 'DentistProfileCtrl'
+        controller: 'TempProfileCtrl'
       })
       .when('/search', {
         templateUrl: 'views/search.html',
-        controller: 'DentistProfileCtrl'
+        controller: 'SearchCtrl'
       })
       .otherwise({
         redirectTo: '/'
