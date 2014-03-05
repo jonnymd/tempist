@@ -14,57 +14,92 @@
   
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <p class="navbar-text navbar-right"><a href="#" class="navbar-link">Jonny Brennan <i class="fa fa-cog"></i></a></p>
     </div><!-- /.navbar-collapse -->
   </nav>
 </div>
 
-<div class="row">
-  <form action="" method="POST" role="form">
-    <div class="col-xs-12 col-md-12 col-lg-12">
+
+<form action="" method="POST" role="form">
+  <div class="row">
+    <div class="col-xs-12 col-md-6 col-lg-6 col-md-offset-1 col-lg-offset-1">
       <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4>Search</h4>
-        </div>
         <div class="panel-body">
-          <a href="#/temp">Temp Profile</a><br>
-          <a href="#/dentist">Dentist Profile</a><br>
-          <a href="#/search">Search</a>
-          {{people}}
+          <img src="http://placehold.it/525x425" class="img-responsive">
         </div>
       </div>
     </div>
     <div class="col-xs-12 col-md-4 col-lg-4">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4>List</h4>
+      <div class="row">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="col-xs-12 col-md-12 col-lg-12">
+              <div class="form-group">
+                <input type="email" class="form-control" id="" ng-model="user.userName" placeholder="Username (email)">
+              </div>
+            </div>
+            <div class="col-xs-9 col-md-9 col-lg-9">
+              <div class="form-group">
+                <input type="password" class="form-control" id="" ng-model="user.password" placeholder="Password">
+              </div>
+            </div>
+            <div class="col-xs-3 col-md-3 col-lg-3">
+              <button type="button" class="btn btn-primary pull-right">Sign in</button>
+            </div>
+            <div class="col-xs-12 col-md-12 col-lg-12">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"><small>Remember me · <a href="#">Forgot Password?</a></small>
+                </label>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="row">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4><strong>New to Tempist?</strong> Sign up</h4>
+          </div>
+          <div class="panel-body">
+            <div class="form-group">
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary">
+                  <input type="radio" name="userType" id="option1" value="practice"><i class="fa fa-users"></i> Practice
+                </label>
+                <label class="btn btn-primary">
+                  <input type="radio" name="userType" id="option2" value="provider"> <i class="fa fa-user"></i> Provider
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="" ng-model="user.userName" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" id="" ng-model="user.password" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <button type="button" class="btn btn-success pull-right">Sign up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-xs-12 col-md-4 col-lg-4">
+      <div class="panel panel-default">
         <div class="panel-body">
-          Results
+          <a href="#/temp">Temp Profile</a><br>
+          <a href="#/dentist">Dentist Profile</a><br>
+          <a href="#/search">Search</a>
         </div>
       </div>
     </div>
 
-<div class="col-xs-12 col-md-8 col-lg-8">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4>Detail</h4>
-        </div>
-        <div class="panel-body">
-          <ul ng-repeat="person in people">
-            <li></li>
-          </ul>
-          <input type="text" ng-model="newPerson"/>
-          <button type="submit" ng-click="addPerson()">Add New Person</button>
-        </div>
-      </div>
-    </div>
-
-    
-
-  </form>
-</div>
-
+  </div>
+</form>
+  
 <div class="footer">
   <p>♥ GingerBeardBros</p>
 </div>
